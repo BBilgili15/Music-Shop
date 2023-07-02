@@ -1,15 +1,18 @@
 package com.codeclan.example.Instruments;
 
-public class Tuba extends Instrument {
-    private int numOfDrums;
+public class Trumpet extends Instrument {
+    public int numOfValves;
 
-    public Tuba(String brand, String colour, int numOfDrums) {
-        super(brand, InstrumentType.PERCUSSION, colour);
-        this.numOfDrums = numOfDrums;
+    public Trumpet(String brand, String colour, int numOfValves, double buyPrice, double sellPrice) {
+        super(brand, InstrumentType.BRASS, colour, buyPrice, sellPrice);
+        this.numOfValves = numOfValves;
     }
 
     public String play() {
-        return "BANG BOOM BANG!";
+        return "TOOT TOOT!";
     }
 
+    public int getNumOfValves() {
+        return numOfValves;
+    }
 }
